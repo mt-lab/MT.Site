@@ -3,7 +3,11 @@
 
 @import "{{ site.theme }}";
 
-.a-title {
+@font-face {
   font-family: "control-freak";
   src: url("../assets/fonts/CONTF___.ttf");
+}
+
+.a-title {
+  font: "control-freak";
 }
