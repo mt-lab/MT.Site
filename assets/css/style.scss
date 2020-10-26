@@ -2,3 +2,8 @@
 ---
 
 @import "{{ site.theme }}";
+
+@font-face {
+  font-family: "control-freak";
+  src: url("../assets/fonts/CONTF___.ttf");
+}
