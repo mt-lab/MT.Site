@@ -1,0 +1,8 @@
+- name: Главная
+  link: /
+- name: Проекты
+  link: /projects.html
+- name: О нас
+  link: /about.html
+- name: Контакты
+  link: /contacts.html
