@@ -1,8 +1,8 @@
 - name: Главная
-  link: site.github.baseurl
+  link: /
 - name: Проекты
-  link: site.github.baseurl/projects.html
+  link: /projects.html
 - name: О нас
-  link: site.github.baseurl/about.html
+  link: /about.html
 - name: Контакты
-  link: site.github.baseurl/contacts.html
+  link: /contacts.html
