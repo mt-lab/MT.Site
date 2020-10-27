@@ -35,3 +35,31 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+# Локальная сборка
+
+1. Установить как в инструкции
+
+    https://jekyllrb.com/docs/installation/#requirements
+    
+2. Установить дополнительно Jekyll версии 3.9.0
+    
+    т.к. это текущая поддерживаемая гитхабом `gem install jekyll -v 3.9.0`
+    
+3. Создать проект
+    
+    `jekyll _3.9.0_ new --force .`
+    
+    могут быть изменения в файлы, поэтому лучше проверить
+
+4. Задеплоить сайт локально
+    
+    ```shell script
+    bundle exec jekyll _3.9.0_ serve
+    ```
+    1. При необходимости сделать как написано в консоли и повторить
+        
+        ```shell script
+        bundle install
+        bundle update
+        ```
