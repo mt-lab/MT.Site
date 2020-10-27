@@ -2,3 +2,25 @@ theme: jekyll-theme-hacker
 title: MT.lab
 description: Независимое творческое объединение
 show_downloads: false
+logo: "assets/images/logo.png"
+
+defaults:
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "news"
+    values:
+      layout: "newsa"

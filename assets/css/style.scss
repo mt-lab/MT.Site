@@ -12,6 +12,17 @@
   font-family: "control-freak";
 }
 
+.navbar-brand img {
+  width: 200px;
+}
+
+.navbar-nav a {
+    padding-right: 20px;
+}
+
+.nav-link {
+    font-size: 1.4em;
+}
 .current {
   color: green;
 }
