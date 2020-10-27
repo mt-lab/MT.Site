@@ -16,8 +16,9 @@
 <body>
 
 <header>
-    <div class="container">
-        {% include navigation.html %}
+    {% include navigation.html %}
+    <!--TODO decide how to do it better-->
+    <div class="container-fluid">
         <h2>{{ site.description | default: site.github.project_tagline }}</h2>
     </div>
 </header>
