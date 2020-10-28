@@ -1,7 +1,7 @@
 - name: Главная
   link: /
 - name: Проекты
-  link: /projects.html
+  link: /projects/
 - name: О нас
   link: /about.html
 - name: Контакты
