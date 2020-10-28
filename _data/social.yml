@@ -1,4 +1,24 @@
-vk: 'https://vk.com/mtlab'
-email: 'public@mtlab.su'
-instagram: 'https://www.instagram.com/mtlab_flow/'
-youtube: 'https://www.youtube.com/channel/UCnWwkly4ReKHN9aDT6DCmFA'
+- vk:
+  name: ВКонтакте
+  link: https://vk.com/mtlab
+  style: fa-vk
+  footer-visible: true
+
+- email:
+  name: Почта
+  link: public@mtlab.su
+  style: fa-envelope
+  footer-visible: false
+
+- instagram:
+  name: Instagram
+  link: https://www.instagram.com/mtlab_flow/
+  style: fa-instagram
+  footer-visible: true
+
+- youtube:
+  name: YouTube
+  link: https://www.youtube.com/channel/UCnWwkly4ReKHN9aDT6DCmFA
+  style: fa-youtube
+  footer-visible: true
+

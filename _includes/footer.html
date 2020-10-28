@@ -2,16 +2,17 @@
     <div>
         <div class="row padding text-center">
             <div class="col-12">
-                <h4>ПОДПИШИСЬ НА НАШИ СОЦСЕТИ</h4>
+                <h5>ПОДПИШИСЬ НА НАШИ СОЦСЕТИ</h5>
             </div>
         </div>
         <hr>
         <div class="row padding text-center">
             <div class="col-12 social padding">
-                <a href="{{site.data.social.vk}}" target="_blank"><i class="fa fa-vk"></i></a>
-                <a href="{{site.data.social.youtube}}" target="_blank"><i
-                        class="icons__item fa fa-youtube"></i></a>
-                <a href="{{site.data.social.instagram}}" target="_blank"><i class="icons__item fa fa-instagram"></i></a>
+                {% for item in site.data.social %}
+                    {% if item.footer-visible %}
+                        <a href="{{ item.link }}" target="_blank"><i class="icons__item fa {{ item.style }}"></i></a>
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
     </div>
