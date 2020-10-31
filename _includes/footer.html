@@ -1,19 +1,17 @@
 <footer>
-    <div>
-        <div class="row no-gutters padding text-center">
-            <div class="col-12">
-                <h5>ПОДПИШИСЬ НА НАШИ СОЦСЕТИ</h5>
-            </div>
+    <div class="row no-gutters padding text-center">
+        <div class="col-12">
+            <h5>ПОДПИШИСЬ НА НАШИ СОЦСЕТИ</h5>
         </div>
-        <hr>
-        <div class="row no-gutters padding text-center">
-            <div class="col-12 social padding">
-                {% for item in site.data.social %}
-                    {% if item.footer-visible %}
-                        <a href="{{ item.link }}" target="_blank"><i class="icons__item fa {{ item.style }}"></i></a>
-                    {% endif %}
-                {% endfor %}
-            </div>
+    </div>
+    <hr>
+    <div class="row no-gutters padding text-center">
+        <div class="col-12 social padding">
+            {% for item in site.data.social %}
+                {% if item.footer-visible %}
+                    <a href="{{ item.link }}" target="_blank"><i class="icons__item fa {{ item.style }}"></i></a>
+                {% endif %}
+            {% endfor %}
         </div>
     </div>
 </footer>
