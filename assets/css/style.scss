@@ -8,8 +8,13 @@
   src: url("../fonts/CONTF___.ttf");
 }
 
-#a-title {
+.control-freak {
+  font-family: "control-freak" ;
+}
+
+.control-freak h2 {
   font-family: "control-freak";
+  font-size: 3em !important;
 }
 
 .navbar-brand img {
@@ -17,12 +22,13 @@
 }
 
 .navbar-nav a {
-    padding-right: 20px;
+  padding-right: 20px;
 }
 
 .nav-link {
-    font-size: 1.4em;
+  font-size: 1.4em;
 }
+
 .current {
   color: green;
 }
