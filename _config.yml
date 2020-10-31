@@ -6,6 +6,7 @@ description: Независимое творческое объединение
 collections:
   projects:
     output: true
+    permalink: /:collection/:title
   news:
     output: true
 
@@ -26,6 +27,10 @@ defaults:
       type: "news"
     values:
       layout: "newsa"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
 
   # Some additional settings
   - scope:
