@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+<div>
+    <p>Исторически, лаборатория не обладает доминирующим направлением работы.</p>
+</div>
+
+{% assign projects = site.projects | where_exp: 'project', 'project.aggregator != true' %}
+{% assign active_projects = projects | where_exp: 'project', 'project.status == "active"' %}
+{% assign finished_projects = projects | where_exp: 'project', 'project.status == "finish"' %}
+{% assign frozen_projects = projects | where_exp: 'project', 'project.status == "frozen"' %}
+
+{% if active_projects.size != 0 %}
+    <div>
+        <h2>На данный момент активно развиваются следующие проекты:</h2>
+    </div>
+
+    {% for project in active_projects %}
+        <ul class="project-list">
+            <li class="project-brief">
+                <a href="{{ project.url }}" class="control-freak">{{ project.title | strip }}</a>
+                - {{ project.excerpt | strip | strip_html | truncatewords : 50 }}
+            </li>
+        </ul>
+    {% endfor %}
+{% endif %}
+
+{% if finished_projects.size != 0 %}
+    <div>
+        <h2>Закрыты/успешно завершены:</h2>
+    </div>
+
+    {% for project in finished_projects %}
+        <ul class="project-list">
+            <li class="project-brief">
+                <a href="{{ project.url }}" class="control-freak">{{ project.title | strip }}</a>
+                - {{ project.excerpt | strip | strip_html | truncatewords : 50 }}
+            </li>
+        </ul>
+    {% endfor %}
+{% endif %}
+
+{% if frozen_projects.size != 0 %}
+    <div>
+        <h2>Временно заморожены:</h2>
+    </div>
+
+    {% for project in frozen_projects %}
+        <ul class="project-list">
+            <li class="project-brief">
+                <a href="{{ project.url }}" class="control-freak">{{ project.title | strip }}</a>
+                - {{ project.excerpt | strip | strip_html | truncatewords : 50 }}
+            </li>
+        </ul>
+    {% endfor %}
+{% endif %}
+
+
+
+
+
+
