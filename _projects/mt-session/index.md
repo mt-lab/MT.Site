@@ -1,6 +1,6 @@
 ---
 title: MT.Session
-slug: mt-sessions
+slug: mt-session
 cover: site.logo
 status: active
 ---
