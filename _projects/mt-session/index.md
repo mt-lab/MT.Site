@@ -1,5 +1,5 @@
 ---
-title: MT.Sessions
+title: MT.Session
 slug: mt-sessions
 cover: site.logo
 status: active
