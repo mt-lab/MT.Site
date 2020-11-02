@@ -1,7 +1,8 @@
 theme: jekyll-theme-hacker
 baseurl: /MT.Site
 title: MT.lab
-logo: "/assets/images/logo.png"
+logo: /assets/images/logo.png
+favicon: /assets/images/favicon.png
 description: Независимое творческое объединение
 
 updates_limit: 10
