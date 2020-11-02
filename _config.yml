@@ -4,6 +4,8 @@ title: MT.lab
 logo: "/assets/images/logo.png"
 description: Независимое творческое объединение
 
+updates_limit: 10
+
 collections:
   projects:
     output: true
