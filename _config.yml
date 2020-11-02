@@ -19,7 +19,7 @@ defaults:
     values:
       layout: "author"
   - scope:
-      path: ""
+      path: "_projects"
       type: "projects"
     values:
       layout: "project"
