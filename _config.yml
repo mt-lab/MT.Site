@@ -7,7 +7,7 @@ description: Независимое творческое объединение
 collections:
   projects:
     output: true
-    permalink: /:collection/:title
+    permalink: /:collection/:path
   news:
     output: true
 
