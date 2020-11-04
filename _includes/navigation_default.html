@@ -9,8 +9,9 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
             {% for item in site.data.navigation %}
+            {% assign current_url = page.url | remove: 'index' %}
             <a href="{{ item.link | relative_url }}"
-               class="nav-link {% if page.url == item.link %} active current {% endif %}">
+               class="nav-link {% if current_url == item.link %} active current {% endif %}">
                 {{ item.name }}
             </a>
             {% endfor %}
