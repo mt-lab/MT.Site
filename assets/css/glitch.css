@@ -14,7 +14,8 @@ body,
   -moz-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   -webkit-backface-visibility: hidden;
-  -webkit-perspective: 1000;
+  -webkit-perspective: 1000px;
+  opacity: 85%;
 }
 
 body {
