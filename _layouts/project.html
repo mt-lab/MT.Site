@@ -4,12 +4,8 @@ layout: default
 <h1 class="control-freak">{{ page.title }}</h1>
 {{ content }}
 
-<!--TODO use compound bool expressions as soon as update jekyll-->
 {% assign updates_dir = page.path | remove: 'index.md' | append: 'updates/' %}
-{% assign updates = site.projects | where_exp: 'update', 'update.path contains updates_dir' %}
-{% assign updates_page = updates | where: 'aggregator', true %}
-{% assign updates_page = updates_page[0] %}
-{% assign updates = updates | where_exp: 'update', 'update.aggregator != true' | sort: 'date', 'first' | reverse %}
+{% assign updates = site.projects | where_exp: 'update', 'update.path contains updates_dir and update.aggregator != true' | sort: 'date', 'first' | reverse %}
 
 {% if updates.size != 0 %}
     <h2>Последние обновления</h2>
@@ -19,5 +15,5 @@ layout: default
             </li>
         {% endfor %}
     </ul>
-    <p><a href="{{ updates_page.url | relative_url | remove: 'index' }}">Все обновления</a></p>
+    <p><a href="{{ page.url | remove: 'index' | append: 'updates' | relative_url }}">Все обновления</a></p>
 {% endif %}

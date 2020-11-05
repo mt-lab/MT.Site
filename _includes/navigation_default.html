@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="{{ '/' | relative_url }}">
-            <img src="{{site.logo | relative_url}}">
+            <img src="{{ site.logo | relative_url }}">
             <!--<h1>{{ site.title | default: site.github.repository_name }}</h1>-->
         </a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
@@ -9,11 +9,11 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
             {% for item in site.data.navigation %}
-            {% assign current_url = page.url | remove: 'index' %}
-            <a href="{{ item.link | relative_url }}"
-               class="nav-link {% if current_url == item.link %} active current {% endif %}">
-                {{ item.name }}
-            </a>
+                {% assign current_url = page.url | remove: 'index' %}
+                <a href="{{ item.link | relative_url }}"
+                   class="nav-link {% if current_url == item.link %} active current {% endif %}">
+                    {{ item.name }}
+                </a>
             {% endfor %}
         </div>
     </div>
