@@ -17,16 +17,11 @@ jobs:
         with:
           ruby-version: 2.6
 
-#      - name: Install dependencies and build
-#        run: |
-#          bundle install
-#          bundle update
-#          bundle exec jekyll build
-
       - name: Install dependencies and build
-        uses: limjh16/jekyll-action-ts@v2
-#        with:
-#          enable_cache: true
+        run: |
+          bundle install
+          bundle update
+          bundle exec jekyll build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
