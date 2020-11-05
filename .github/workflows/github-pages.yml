@@ -17,6 +17,11 @@ jobs:
         with:
           ruby-version: 2.6
 
+      - name: Bundle install
+        run: |
+          bundle install
+          bundle update
+
       - name: Install dependencies and build
         uses: limjh16/jekyll-action-ts@v2
         with:
