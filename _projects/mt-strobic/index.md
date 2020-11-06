@@ -30,6 +30,6 @@ status: finish
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/SQGu-6eci5k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Фото работа (для людей со слабым коннектом)
+Фото работы (для людей со слабым коннектом)
 
 ![Фото работы MT.Strobic](example.jpg)
