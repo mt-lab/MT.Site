@@ -1,0 +1,54 @@
+{% comment %}
+    takes:
+    "id" - use with multiple includes, a number;
+    "images" - list which must contain "path" to image and optionally can contain "header" and "caption" for each entry.
+
+    EXAMPLE:
+    // define images array somehow
+    images:
+        - path: image1.png
+        - path: image2.png
+        - path: image-with-header.png
+          header: I AM HEADER
+        - path: image-with-header-and-caption.png
+          header: ANOTHER HEADER
+          caption: description og the image
+
+    // use include
+    {% include image_gallery.html id=0 images=images %}
+{% endcomment %}
+
+{% assign id = include.id %}
+{% assign images = include.images %}
+{% assign carousel_name = "Carousel" | append: id %}
+
+{% if images %}
+<hr>
+<div id="{{carousel_name}}" class="carousel slide" data-ride="carousel" data-interval="false">
+    <ol class="carousel-indicators">
+        {% for image in images %}
+        <li data-target="#{{carousel_name}}" data-slide-to="{{ forloop.index0 }}" {% if forloop.index0 == 0 %} class="active" {% endif %}></li>
+        {% endfor %}
+    </ol>
+    <div class="carousel-inner">
+        {% for image in images %}
+        <div class="carousel-item {% if forloop.index0 == 0 %} active {% endif %}">
+            <img src="{{image.path}}" class="d-block mx-auto" alt="{{image.alt | default: image.path }}">
+            <div class="carousel-caption d-none d-md-block">
+                {% if image.header %}<h2>{{image.header}}</h2>{% endif %}
+                {% if image.caption %}<p>{{image.caption}}</p>{% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <a class="carousel-control-prev" href="#{{carousel_name}}" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#{{carousel_name}}" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<hr>
+{% endif %}

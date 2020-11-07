@@ -9,7 +9,7 @@
 }
 
 .control-freak {
-  font-family: "control-freak" ;
+  font-family: "control-freak";
 }
 
 .control-freak h2 {
@@ -40,3 +40,23 @@
 
 }
 
+
+.carousel-indicators {
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+  opacity: 50%;
+  background-color: #666666;
+}
+
+.carousel-inner {
+  max-height: 500px;
+}
+
+.carousel-item {
+  max-height: inherit;
+}
+
+.carousel-item img {
+  max-height: inherit;
+}
