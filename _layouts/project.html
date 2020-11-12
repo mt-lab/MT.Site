@@ -7,7 +7,7 @@ layout: default
 
 {% if page.pagination.enabled %}
     <div class="updates">
-        {% if paginator.posts %}
+        {% if paginator.posts != empty %}
             <h2 id="last-updates">Последние обновления</h2>
                 <ul>
                     {% for post in paginator.posts%}
