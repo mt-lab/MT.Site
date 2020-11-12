@@ -1,8 +1,10 @@
 ---
 title: MT.Strobic
-slug: mt-strobic
 cover: site.logo
 status: finish
+pagination:
+  enabled: true
+  category: mt-strobic
 ---
 
 Стробоэкран для различных областей применения

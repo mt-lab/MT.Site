@@ -5,12 +5,24 @@ logo: /assets/images/logo.png
 favicon: /assets/images/favicon.png
 description: Независимое творческое объединение
 
-updates_limit: 10
+page_excerpts: true
+
+plugins:
+  - jekyll-paginate-v2
+
+pagination:
+  enabled: true
+  collection: 'posts'
+  per_page: 4
+  permalink: '/page/:num/'
+  title: ':title - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
 
 collections:
-  projects:
+  posts:
     output: true
-    permalink: /:collection/:path
   news:
     output: true
 
@@ -22,10 +34,15 @@ defaults:
     values:
       layout: "author"
   - scope:
-      path: "_projects"
-      type: "projects"
+      path: "projects"
+      type: "pages"
     values:
       layout: "project"
+  - scope:
+      path: "projects"
+      type: "posts"
+    values:
+      layout: "post"
   - scope:
       path: ""
       type: "news"

@@ -1,8 +1,10 @@
 ---
 title: MT.ROV
-slug: mt-rov
 cover: site.logo
 status: active
+pagination:
+  enabled: true
+  category: mt-rov
 ---
 
 телеуправляемый необитаемый подводный аппарат

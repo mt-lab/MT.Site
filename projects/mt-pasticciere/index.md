@@ -1,8 +1,10 @@
 ---
 title: MT.Pasticciere
-slug: mt-pasticciere
 cover: site.logo
 status: frozen
+pagination:
+  enabled: true
+  category: mt-pasticciere
 ---
 
 Cистема фигурного нанесения глазури с обратной связью

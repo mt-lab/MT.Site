@@ -2,6 +2,9 @@
 title: MT.Session
 cover: site.logo
 status: active
+pagination:
+  enabled: true
+  category: mt-session
 ---
 
 Самообучение и эксперименты с аудиозаписью и созданием музыки со странными видеоотчётами на youtube

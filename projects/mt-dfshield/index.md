@@ -1,8 +1,10 @@
 ---
 title: MT.DFShield
-slug: mt-dfshield
 cover: site.logo
 status: finish
+pagination:
+  enabled: true
+  category: mt-dfshield
 ---
 
 Шилд для DFPlayer, позволяет удобным образом интегрировать его в крупные проекты или же просто использовать как плеер.

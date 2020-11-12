@@ -1,8 +1,10 @@
 ---
 title: MT.Fish
-slug: mt-fish
 cover: site.logo
 status: finish
+pagination:
+  enabled: true
+  category: mt-fish
 ---
 
 Робо-рыба.

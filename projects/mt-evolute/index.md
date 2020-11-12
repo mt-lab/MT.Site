@@ -1,8 +1,10 @@
 ---
 title: MT.Evolute
-slug: mt-evolute
 cover: site.logo
 status: active
+pagination:
+  enabled: true
+  category: mt-evolute
 ---
 Открытый комплекс для прототипирования мобильных роботов.
 - [MT.Evolute.ru](https://mtevolute.ru)
