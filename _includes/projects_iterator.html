@@ -1,0 +1,14 @@
+{% if include.projects.size != 0 %}
+    <div>
+        <h2>{{ include.header | default: 'Проекты:'}}</h2>
+    </div>
+
+    {% for project in include.projects %}
+        <ul class="project-list">
+            <li class="project-brief">
+                <a href="{{ project.url | remove: 'index.html' | relative_url }}" class="control-freak">{{ project.title | strip }}</a>
+                - {{ project.excerpt | strip | strip_html | truncatewords : 50 }}
+            </li>
+        </ul>
+    {% endfor %}
+{% endif %}

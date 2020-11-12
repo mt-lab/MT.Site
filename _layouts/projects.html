@@ -6,55 +6,22 @@ layout: default
     <p>Исторически, лаборатория не обладает доминирующим направлением работы.</p>
 </div>
 
-{% assign projects = site.projects | where: 'aggregator', nil %}
+{% assign projects = '' | split: ',' %}
+{% for page in site.pages %}
+    {% unless page.dir contains 'page' %}
+        {% assign projects = projects | push: page %}
+    {% endunless %}
+{% endfor %}
+
 {% assign active_projects = projects | where: 'status', 'active' %}
 {% assign finished_projects = projects | where: 'status', 'finish' %}
 {% assign frozen_projects = projects | where: 'status', 'frozen' %}
 
-{% if active_projects.size != 0 %}
-    <div>
-        <h2>На данный момент активно развиваются следующие проекты:</h2>
-    </div>
+{% include projects_iterator.html projects=active_projects header='На данный момент активно развиваются следующие проекты:'%}
 
-    {% for project in active_projects %}
-        <ul class="project-list">
-            <li class="project-brief">
-                <a href="{{ project.url | remove: 'index' | relative_url }}" class="control-freak">{{ project.title | strip }}</a>
-                - {{ project.excerpt | strip | strip_html | truncatewords : 50 }}
-            </li>
-        </ul>
-    {% endfor %}
-{% endif %}
+{% include projects_iterator.html projects=finished_projects header='Закрыты/успешно завершены:'%}
 
-{% if finished_projects.size != 0 %}
-    <div>
-        <h2>Закрыты/успешно завершены:</h2>
-    </div>
-
-    {% for project in finished_projects %}
-        <ul class="project-list">
-            <li class="project-brief">
-                <a href="{{ project.url | remove: 'index' | relative_url }}" class="control-freak">{{ project.title | strip }}</a>
-                - {{ project.excerpt | strip | strip_html | truncatewords : 50 }}
-            </li>
-        </ul>
-    {% endfor %}
-{% endif %}
-
-{% if frozen_projects.size != 0 %}
-    <div>
-        <h2>Временно заморожены:</h2>
-    </div>
-
-    {% for project in frozen_projects %}
-        <ul class="project-list">
-            <li class="project-brief">
-                <a href="{{ project.url | remove: 'index' | relative_url }}" class="control-freak">{{ project.title | strip }}</a>
-                - {{ project.excerpt | strip | strip_html | truncatewords : 50 }}
-            </li>
-        </ul>
-    {% endfor %}
-{% endif %}
+{% include projects_iterator.html projects=frozen_projects header='Временно заморожены:'%}
 
 
 
