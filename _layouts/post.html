@@ -2,13 +2,22 @@
 layout: default
 ---
 
-<small>{{ page.date | date: "%-d %B %Y" }}</small>
+<small>{{ page.date | date: "%d.%m.%Y" }}</small>
 <h1>{{ page.title }}</h1>
 
-<p class="view">by {{ page.author | default: site.author }}</p>
+{% if page.authors %}
+  <p>by {{ page.authors | array_to_sentence_string: 'и' }}</p>
+{% elsif page.author %}
+  <p>by {{ page.author | default: site.author }}</p>
+{% endif %}
 
 {{content}}
 
-{% if page.tags %}
+{% if page.tags != empty %}
   <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
 {% endif %}
+
+{% assign path_elements = page.path | split: '/' %}
+{% assign end_idx = path_elements.size| minus: 2 %}
+<a href="{{path_elements | slice: 0, end_idx | join: '/' | relative_url}}">К проекту</a>
+
