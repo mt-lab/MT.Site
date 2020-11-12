@@ -27,3 +27,9 @@ telegram:
   link: https://t.me/mt_lab
   style: fa-telegram
   footer-visible: true
+
+github:
+  name: GitHub
+  link: https://github.com/mt-lab
+  style: fa-github
+  footer-visible: true
