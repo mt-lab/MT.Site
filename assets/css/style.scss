@@ -30,7 +30,7 @@
 }
 
 .current {
-  color: green;
+  color: #b5e853;
 }
 
 .social a {
@@ -59,4 +59,17 @@
 
 .carousel-item img {
   max-height: inherit;
+}
+
+.updates{
+  display: block;
+}
+
+
+.pagination li{
+  list-style-image: none !important;
+}
+
+.text-lab{
+  color: #b5e853 !important;
 }
