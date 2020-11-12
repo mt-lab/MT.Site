@@ -8,8 +8,8 @@
     <div class="row no-gutters padding text-center">
         <div class="col-12 social padding">
             {% for item in site.data.social %}
-                {% if item.footer-visible %}
-                    <a href="{{ item.link }}" target="_blank"><i class="icons__item fa {{ item.style }}"></i></a>
+                {% if item[1].footer-visible %}
+                    <a href="{{ item[1].link }}" target="_blank"><i class="icons__item fa {{ item[1].style }}"></i></a>
                 {% endif %}
             {% endfor %}
         </div>

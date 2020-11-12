@@ -3,9 +3,9 @@
 
 # Связаться с нами
 довольно просто, если хочется обратиться сразу ко всем нам, то достаточно написать письмо на почту:
-### [public@mtlab.su](mailto:public@mtlab.su)
-### [telegram](https://t.me/mt_lab) 
-Контактные данные участников, которые не против пообщаться лично, расположены на странице [О нас](/about)
+### [public@mtlab.su](mailto:{{site.data.social.email.link}})
+### [telegram]({{site.data.social.telegram.link}})
+Контактные данные участников, которые не против пообщаться лично, расположены на странице [О нас]({{'/about' | relative_url}})
 Ешё у нас есть канал на
-### [youtube](https://www.youtube.com/channel/UCnWwkly4ReKHN9aDT6DCmFA)
+### [youtube]({{site.data.social.youtube.link}})
 Физическое посещение нашей лаборатории пока что не практикуется, но мы задумываемся над этим.
