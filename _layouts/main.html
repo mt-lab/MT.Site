@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+{{ content | markdownify }}
+
+{% for post in paginator.posts %}
+    <hr>
+    <div class="post-preview">
+        <div class="post-header">
+            <hr>
+            <p>
+                {% if post.authors %}
+                    авторы: {{ post.authors | array_to_sentence_string: 'и' }}
+                    {% elsif post.author %}
+                    автор: {{ post.author | default: site.author }}
+                {% endif %}
+                {{ post.date | date: "%d.%m.%Y" }}
+            </p>
+            <h2 class="control-freak">{{ post.title }}</h2>
+            <hr>
+        </div>
+        <p>{{ post.excerpt }}</p>
+    </div>
+{% endfor %}
+
+{% if paginator.total_pages > 1 %}
+    <nav aria-label="Main posts pagination">
+        <ul class="pagination justify-content-center">
+            <li class="page-item {% unless paginator.previous_page %} disabled {% endunless %}">
+                <a class="bg-dark page-link {% if paginator.previous_page %} text-lab {% endif %}"
+                   href="{{ paginator.previous_page_path | relative_url | append: '#last-updates' }}"
+                        {% unless paginator.previous_page %} aria-disabled="true" {% endunless %}>Новее</a>
+            </li>
+            <li class="page-item {% unless paginator.next_page %} disabled {% endunless %}">
+                <a class="page-link bg-dark {% if paginator.next_page %} text-lab {% endif %}"
+                   href="{{ paginator.next_page_path | relative_url | append: '#last-updates' }}"
+                        {% unless paginator.previous_page %} aria-disabled="true" {% endunless %}>Старше</a>
+            </li>
+        </ul>
+    </nav>
+{% endif %}
