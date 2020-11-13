@@ -14,7 +14,7 @@ var data = [
 		footer: '<a href=\"https://museum.itmo.ru/page/36/\" target=\"_blank\">Источник - Сайт Музея ИТМО</a>'
 	},
 	{
-		time: '1989',
+		time: '1989-09-01',
 		header: 'Тимофеев Б.П.',
 		body: [{
 			tag: 'h1',
