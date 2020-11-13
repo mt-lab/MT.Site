@@ -31,7 +31,9 @@ pagination:
 
 Видео с примером работы
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/SQGu-6eci5k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="embed-youtube">
+    <iframe class="embed-youtube" src="https://www.youtube-nocookie.com/embed/SQGu-6eci5k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 Фото работы (для людей со слабым коннектом)
 

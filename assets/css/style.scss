@@ -61,15 +61,30 @@
   max-height: inherit;
 }
 
-.updates{
+.updates {
   display: block;
 }
 
 
-.pagination li{
+.pagination li {
   list-style-image: none !important;
 }
 
-.text-lab{
+.text-lab {
   color: #b5e853 !important;
+}
+
+div.embed-youtube {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+iframe.embed-youtube {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
