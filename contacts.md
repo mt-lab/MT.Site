@@ -9,3 +9,6 @@
 Ешё у нас есть канал на
 ### [youtube]({{site.data.social.youtube.link}})
 Физическое посещение нашей лаборатории пока что не практикуется, но мы задумываемся над этим.
+### Есть ещё Discord
+<iframe src="https://discordapp.com/widget?id=396342699730534409&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+
