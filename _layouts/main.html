@@ -8,19 +8,20 @@ layout: default
     <hr>
     <div class="post-preview">
         <div class="post-header">
-            <hr>
+            <a href="{{ post.url | relative_url }}"><h2 class="control-freak">{{ post.title }}</h2></a>
             <p>
+                {{ post.date | date: "%d.%m.%Y" }}
                 {% if post.authors %}
                     авторы: {{ post.authors | array_to_sentence_string: 'и' }}
                     {% elsif post.author %}
                     автор: {{ post.author | default: site.author }}
                 {% endif %}
-                {{ post.date | date: "%d.%m.%Y" }}
             </p>
-            <h2 class="control-freak">{{ post.title }}</h2>
-            <hr>
         </div>
-        <p>{{ post.excerpt }}</p>
+        <div class="post-body">
+            <p>{{ post.excerpt }}</p>
+            <a href="{{ post.url | relative_url }}">К посту</a>
+        </div>
     </div>
 {% endfor %}
 

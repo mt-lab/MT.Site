@@ -2,7 +2,7 @@
 layout: main
 pagination:
   enabled: true
-  per_page: 4
+  per_page: 10
 ---
 ## Добро пожаловать в MT.lab
 
