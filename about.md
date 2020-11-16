@@ -31,19 +31,19 @@
         <img src="ku.jpeg" width="100%" height="100%">
         </td>
         <td>
-            Сайт<br>
-            Второй сайт<br>
-            почта<br>
-            телега<br>
+            <a href="https://kuprianov.su">Типа официальный сайт</a><br>
+            <a href="https://mexatronik.ru">Сайт для души</a><br>
+            <a href="mailto:dmitry@kuprianov.su">Почта</a><br>
+            <a href="https://t.me/ku_dmitry">Telegram</a><br>
             <br>
             <h2>Проекты:</h2>
             <ul>
-                <li>MT.Session</li>
+                <li><a href="/projects/mt-session">MT.Session</a></li>
             </ul>
         </td>
     </tr>
 </table>
- Немного о себе
+ Ковыряюсь с железками, закрываю гештальты, пытаюсь писать музыку.
 
 
 
