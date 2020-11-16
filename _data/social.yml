@@ -1,35 +1,42 @@
 vk:
   name: ВКонтакте
   link: https://vk.com/mtlab
-  style: fa-vk
+  style: fa fa-vk
   footer-visible: false
 
 email:
   name: Почта
   link: public@mtlab.su
-  style: fa-envelope
+  style: fa fa-envelope
   footer-visible: false
 
 instagram:
   name: Instagram
   link: https://www.instagram.com/mtlab_flow/
-  style: fa-instagram
-  footer-visible: true
+  style: fa fa-instagram
+  footer-visible: false
 
 youtube:
   name: YouTube
   link: https://www.youtube.com/channel/UCnWwkly4ReKHN9aDT6DCmFA
-  style: fa-youtube
+  style: fa fa-youtube
   footer-visible: true
 
 telegram:
   name: Telegram
   link: https://t.me/mt_lab
-  style: fa-telegram
+  style: fa fa-telegram
   footer-visible: true
 
 github:
   name: GitHub
   link: https://github.com/mt-lab
-  style: fa-github
+  style: fa fa-github
   footer-visible: true
+
+discord:
+  name: Discord
+  link: https://discord.gg/JUXryCVQhC
+  style: fab fa-discord
+  footer-visible: true
+
