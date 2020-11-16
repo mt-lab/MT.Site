@@ -18,13 +18,34 @@
 # Кто мы?
 
 ## На данный момент активно принимают участие:
+<table style="width:40%">
+    <tr>
+        <td style="width:20% align:center">
+            Куприянов
+        </td>
+        <td style="width:20% align:center">
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <img src="ku.jpeg" width="100%" height="100%">
+        </td>
+        <td>
+            <a href="https://kuprianov.su">Типа официальный сайт</a><br>
+            <a href="https://mexatronik.ru">Сайт для души</a><br>
+            <a href="mailto:dmitry@kuprianov.su">Почта</a><br>
+            <a href="https://t.me/ku_dmitry">Telegram</a><br>
+            <br>
+            <h2>Проекты:</h2>
+            <ul>
+                <li><a href="/projects/mt-session">MT.Session</a></li>
+            </ul>
+        </td>
+    </tr>
+</table>
+ Ковыряюсь с железками, закрываю гештальты, пытаюсь писать музыку.
 
-Куприянов | Борисов
---- | --- 
-Фото | Фото  
-С 2012 года | C 2016 года
-Активные проекты: | Активные проекты:
-MT.Session | MT.Session
+
 
 ## В какой-то момент значительный вклад в деятельность лаборатории внесли
 
