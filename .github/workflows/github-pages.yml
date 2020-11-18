@@ -23,8 +23,22 @@ jobs:
           bundle update
           bundle exec jekyll build
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Delete old version
+        uses: garygrossgarten/github-action-ssh@v0.5.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+          command: |
+            rm -rfv !(".htaccess")
+          host: ${{secrets.HOSTING_HOST}}
+          username: ${{secrets.HOSTING_USER}}
+          password: ${{secrets.HOSTING_PASS}}
+
+
+      - name: Publish site
+        uses: garygrossgarten/github-action-scp@v0.6.0
+        with:
+          local: _site
+          remote: ./
+          host: ${{secrets.HOSTING_HOST}}
+          username: ${{secrets.HOSTING_USER}}
+          password: ${{secrets.HOSTING_PASS}}
+
