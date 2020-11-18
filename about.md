@@ -18,19 +18,19 @@
 # Кто мы?
 
 ## На данный момент активно принимают участие:
-<table style="width:40%">
+<table style="width:60%">
     <tr>
         <td style="width:20% align:center">
             Куприянов
         </td>
-        <td style="width:20% align:center">
+        <td style="width:40% align:left">
         </td>
     </tr>
     <tr>
-        <td>
+        <td style="width:20%">
         <img src="ku.jpeg" width="100%" height="100%">
         </td>
-        <td>
+        <td style="width:40%">
             <a href="https://kuprianov.su">Типа официальный сайт</a><br>
             <a href="https://mexatronik.ru">Сайт для души</a><br>
             <a href="mailto:dmitry@kuprianov.su">Почта</a><br>
