@@ -23,11 +23,9 @@ jobs:
           bundle update
           bundle exec jekyll build
 
-
-
       - name: Delete old version
         run: |
-          ssh ${{secrets.HOSTING_USER}}@${{secrets.HOSTING_HOST}} 'rm -rfv !(".htaccess")'
+          ssh ${{secrets.HOSTING_USER}}@${{secrets.HOSTING_HOST}} -o StrictHostKeyChecking=no 'rm -rfv !(".htaccess")'
 
       - name: Publish site
         uses: garygrossgarten/github-action-scp@v0.6.0
