@@ -1,4 +1,4 @@
-name: Deploy to GH Pages
+name: Deploy to Hosting
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  github-pages:
+  site-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Setup repo
@@ -23,15 +23,11 @@ jobs:
           bundle update
           bundle exec jekyll build
 
-      - name: Delete old version
-        uses: garygrossgarten/github-action-ssh@v0.5.0
-        with:
-          command: |
-            rm -rfv !(".htaccess")
-          host: ${{secrets.HOSTING_HOST}}
-          username: ${{secrets.HOSTING_USER}}
-          password: ${{secrets.HOSTING_PASS}}
 
+
+      - name: Delete old version
+        run: |
+          ssh ${{secrets.HOSTING_USER}}@${{secrets.HOSTING_HOST}} 'rm -rfv !(".htaccess")'
 
       - name: Publish site
         uses: garygrossgarten/github-action-scp@v0.6.0
