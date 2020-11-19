@@ -38,7 +38,11 @@ jobs:
 
       - name: Delete old version
         run: |
-          ssh hosting 'shopt extglob && rm -rfv !(\.*)'
+          ssh hosting << END
+            shopt -s extglob
+            rm -rfv !(\.*)
+            shopt -u extglob
+          END
 
       - name: Publish site
         run: |
