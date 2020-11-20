@@ -2,6 +2,9 @@
 title: MT.Session
 cover: site.logo
 status: active
+team:
+  - bedlamzd
+  - mexatronik
 pagination:
   enabled: true
   category: mt-session

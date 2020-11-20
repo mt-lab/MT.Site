@@ -5,6 +5,9 @@ status: frozen
 pagination:
   enabled: true
   category: mt-pasticciere
+team:
+  - bedlamzd
+  - mexatronik
 ---
 
 Cистема фигурного нанесения глазури с обратной связью
