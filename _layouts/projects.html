@@ -7,8 +7,9 @@ layout: default
 </div>
 
 {% assign projects = '' | split: ',' %}
-{% for page in site.pages %}
-    {% unless page.dir contains 'page' %}
+{% assign pages = site.pages | where_exp: 'page', 'page.dir contains "project"' %}
+{% for page in pages %}
+    {% unless page.dir contains 'page' or page.aggregator != nil %}
         {% assign projects = projects | push: page %}
     {% endunless %}
 {% endfor %}
@@ -17,11 +18,11 @@ layout: default
 {% assign finished_projects = projects | where: 'status', 'finish' %}
 {% assign frozen_projects = projects | where: 'status', 'frozen' %}
 
-{% include projects_iterator.html projects=active_projects header='На данный момент активно развиваются следующие проекты:'%}
+{% include projects_iterator.html projects=active_projects header='На данный момент активно развиваются следующие проекты:' %}
 
-{% include projects_iterator.html projects=finished_projects header='Закрыты/успешно завершены:'%}
+{% include projects_iterator.html projects=finished_projects header='Закрыты/успешно завершены:' %}
 
-{% include projects_iterator.html projects=frozen_projects header='Временно заморожены:'%}
+{% include projects_iterator.html projects=frozen_projects header='Временно заморожены:' %}
 
 
 
