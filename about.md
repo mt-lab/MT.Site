@@ -17,36 +17,19 @@
 
 # Кто мы?
 
+{% assign members = site.data.members | group_by_exp: 'member', 'member[1].active' %}
+{% assign active_members = members | where: 'name', 'true' | first %}
+{% assign inactive_members = members | where: 'name', 'false' | first %}
+
+{% if active_members != nil %}
 ## На данный момент активно принимают участие:
-<table style="width:60%">
-    <tr>
-        <td style="width:20% align:center">
-            Куприянов
-        </td>
-        <td style="width:40% align:left">
-        </td>
-    </tr>
-    <tr>
-        <td style="width:20%">
-        <img src="ku.jpeg" width="100%" height="100%">
-        </td>
-        <td style="width:40%">
-            <a href="https://kuprianov.su">Типа официальный сайт</a><br>
-            <a href="https://mexatronik.ru">Сайт для души</a><br>
-            <a href="mailto:dmitry@kuprianov.su">Почта</a><br>
-            <a href="https://t.me/ku_dmitry">Telegram</a><br>
-            <br>
-            <h2>Проекты:</h2>
-            <ul>
-                <li><a href="/projects/mt-session">MT.Session</a></li>
-            </ul>
-        </td>
-    </tr>
-</table>
- Ковыряюсь с железками, закрываю гештальты, пытаюсь писать музыку.
+{% include members_iterator.html members=active_members.items %}
+{% endif %}
+
+{% if inactive_members != nil %}
+## Ранее значительный вклад в деятельность лаборатории внесли:
+{% include members_iterator.html members=inactive_members.items %}
+{% endif %}
 
 
 
-## В какой-то момент значительный вклад в деятельность лаборатории внесли
-
-Аналогичная таблица?

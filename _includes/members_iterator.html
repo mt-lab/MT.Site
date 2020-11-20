@@ -1,0 +1,56 @@
+{% if include.header != nil %}
+
+<h2>{{ include.header }}</h2>
+
+{% endif %}
+
+{% assign projects = '' | split: ',' %}
+{% assign pages = site.pages | where_exp: 'page', 'page.dir contains "project"' %}
+{% for page in pages %}
+    {% unless page.dir contains 'page' or page.aggregator != nil %}
+        {% assign projects = projects | push: page %}
+    {% endunless %}
+{% endfor %}
+
+{% for item in include.members %}
+
+    {% assign member_key = item[0] %}
+    {% assign member = item[1] %}
+
+<hr>
+<div class="table-responsive">
+    <table>
+        <tr>
+            <td style="width: 20%; text-align: left">
+                <h2>{{ member.name }}</h2>
+            </td>
+            <td style="width: 40%; alignment: left"></td>
+        </tr>
+        <tr>
+            <td style="width: 20%">
+                <img src="{{ member.avatar | default: site.logo }}" width="100%" height="auto"
+                     alt="{{ member.avatar }}">
+            </td>
+            <td style="width: 40%">
+                {% for item in member.links %}
+                    {% assign link_key = item[0] %}
+                    {% assign link = item[1] %}
+                    <a href="{{ link.link }}">{{ link.text | default: link.link }}</a><br>
+                {% endfor %}
+                <br>
+                {% assign member_projects = projects | where_exp: 'project', 'project.team contains member_key' %}
+                {% if member_projects != empty %}
+                    <h2>Проекты:</h2>
+                    <ul>
+                        {% for project in member_projects %}
+                            <li><a href="{{ project.url | relative_url | remove: 'index.html' }}">{{ project.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </td>
+        </tr>
+    </table>
+    {{ member.description }}
+</div>
+
+{% endfor %}

@@ -1,0 +1,36 @@
+mexatronik:
+  name: Куприянов
+  active: true
+  avatar: ku.jpeg
+  links:
+    official-site:
+      link: https://kuprianov.su/
+      text: "Типа официальный сайт"
+    site:
+      link: https://mexatronik.ru/
+      text: "Сайт для души"
+    email:
+      link: mailto:dmitry@kuprianov.su
+      text: Почта
+    telegram:
+      link: https://t.me/ku_dmitry
+      text: Telegram
+  description: |
+    Ковыряюсь с железками, закрываю гештальты, пытаюсь писать музыку.
+
+bedlamzd:
+  name: Борисов Максим
+  active: true
+  avatar: bedlamzd.jpg
+  links:
+    site:
+      link: https://bedlamzd.github.io/
+      text: Личный сайт
+    email:
+      link: mailto:https://bedlamzd.github.io/
+      text: Почта
+    telegram:
+      link: https://t.me/bedlamzd
+      text: Telegram
+  description: |
+    Программист, около-музыкант
