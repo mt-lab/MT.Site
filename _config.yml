@@ -28,11 +28,6 @@ collections:
 defaults:
   # Layout default settings
   - scope:
-      path: ""
-      type: "authors"
-    values:
-      layout: "author"
-  - scope:
       path: "projects"
       type: "pages"
     values:
@@ -42,11 +37,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-  - scope:
-      path: ""
-      type: "news"
-    values:
-      layout: "newsa"
   - scope:
       path: ""
     values:
