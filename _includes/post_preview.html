@@ -1,0 +1,15 @@
+{% assign post = include.post %}
+
+<div class="post-preview">
+    <div class="post-header">
+        <a href="{{ post.url | relative_url }}"><h2 class="control-freak">{{ post.title }}</h2></a>
+        <p>
+            {{ post.date | date: "%d.%m.%Y" }}
+            {% include authors_snippet.html page=post %}
+        </p>
+    </div>
+    <div class="post-body">
+        <p>{{ post.excerpt }}</p>
+        <a href="{{ post.url | relative_url }}">К посту</a>
+    </div>
+</div>
