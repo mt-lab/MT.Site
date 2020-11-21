@@ -6,26 +6,13 @@ layout: default
 
 
 {% if page.pagination.enabled %}
-    <div class="updates">
-        {% if paginator.posts != empty %}
-            <h2 id="last-updates">Последние обновления</h2>
-                <ul>
-                    {% for post in paginator.posts%}
-                        <li>{{ post.date | date: "%d.%m.%Y" }} - <a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-                    {% endfor %}
-                </ul>
-            {% if paginator.total_pages > 1 %}
-                <nav aria-label="Project updates pagination">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item {% unless paginator.previous_page %} disabled {% endunless %}">
-                            <a class="bg-dark page-link {% if paginator.previous_page %} text-lab {% endif %}" href="{{ paginator.previous_page_path | relative_url | append: '#last-updates' }}" {% unless paginator.previous_page %} aria-disabled="true" {% endunless %}>Новее</a>
-                        </li>
-                        <li class="page-item {% unless paginator.next_page %} disabled {% endunless %}">
-                            <a class="page-link bg-dark {% if paginator.next_page %} text-lab {% endif %}" href="{{ paginator.next_page_path | relative_url | append: '#last-updates' }}" {% unless paginator.previous_page %} aria-disabled="true" {% endunless %}>Старше</a>
-                        </li>
-                    </ul>
-                </nav>
-            {% endif %}
-        {% endif %}
-    </div>
+    {% if paginator.posts != empty %}
+        <h2 id="last-updates">Последние обновления</h2>
+        {% for post in paginator.posts %}
+            <hr>
+            {% include post_preview.html post=post %}
+        {% endfor %}
+        <br>
+        {% include pagination_nav.html %}
+    {% endif %}
 {% endif %}
