@@ -38,6 +38,11 @@ defaults:
     values:
       layout: "post"
   - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
       path: ""
     values:
       layout: "default"
